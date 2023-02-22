@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign Up Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/068a42f04c.js"></script>
+  </head>
+  <body>
+    <div id="login-box">
+      <form id="left-column">
+        <p>Please fill in this form to create an account.</p>
+
+        <div class="input-box">
+          <input type="text" name="username" required />
+          <label for="username">Username</label>
+        </div>
+
+        <div class="input-box">
+          <input type="text" name="email" required />
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-box">
+          <input type="password" name="pass" required />
+          <label for="pass">Password</label>
+        </div>
+
+        <div class="input-box">
+          <input type="password" name="pass-confirm" required />
+          <label for="pass-confirm">Repeat Password</label>
+        </div>
+
+        <input type="submit" name="signup-button" value="Sign up" />
+
+        <div>
+          <span class="txt1">Already have an account?</span>
+          <a class="txt2" href="#">Sign In</a>
+        </div>
+      </form>
+
+      <div id="right-column">
+        <h1 class="signinwith">Sign in with a <br />social network</h1>
+
+        <div id="buttons">
+          <button class="social facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span>Log in with facebook</span>
+          </button>
+          <button class="social twitter">
+            <i class="fab fa-twitter"></i>
+            <span>Log in with Twitter</span>
+          </button>
+          <button class="social google">
+            <i class="fab fa-google-plus-g"></i>
+            <span>Log in with Google+</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="or">OR</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $("input").focus(function () {
+        $(this).parent().addClass("active");
+        $("input").focusout(function () {
+          if ($(this).val() == "") {
+            $(this).parent().removeClass("active");
+          } else {
+            $(this).parent().addClass("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

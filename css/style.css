@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #efefef;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #7f7f7f;
+  font-size: 15px;
+}
+
+#login-box {
+  position: relative;
+  max-width: 650px;
+  margin: 5% auto 0;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [2];
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+form {
+  padding: 30px;
+}
+
+form h2 {
+  text-align: center;
+}
+
+form p {
+  font-size: 13px;
+}
+
+.input-box {
+  position: relative;
+  margin: 20px 0 20px;
+  width: 100%;
+}
+
+.input-box input {
+  position: absolute;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #7f7f7f;
+  outline: none;
+  padding: 10px 0;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.input-box label {
+  position: relative;
+  padding: 10px 0;
+  display: inline-block;
+  pointer-events: none;
+  color: #7f7f7f;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.input-box.active input {
+  border-bottom: 2px solid #555;
+}
+
+.input-box.active label {
+  color: #555;
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
+
+input[type="submit"] {
+  margin-bottom: 28px;
+  width: 120px;
+  height: 32px;
+  background: #f44336;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-transform: 0.2s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background: #ff5722;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.txt1 {
+  font-size: 13px;
+  color: #7f7f7f;
+  line-height: 1.5;
+}
+
+.txt2 {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.or {
+  position: absolute;
+  top: 50%;
+  left: 305px;
+  width: 40px;
+  height: 40px;
+  background: #efefef;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  line-height: 40px;
+  text-align: center;
+}
+
+#right-column {
+  background: url("../images/77522.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+#right-column h1 {
+  margin: 40px 0;
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+#buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+button.social {
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button.social i {
+  margin-right: 20px;
+}
+
+.facebook {
+  background: #32508e;
+}
+
+.twitter {
+  background: #55acee;
+}
+
+.google {
+  background: #dd4b39;
+}
+
+@media only screen and (max-width: 767px) {
+  #login-box {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
+  .or {
+    display: none;
+  }
+  #right-column {
+    background: none;
+  }
+  .signinwith {
+    display: none;
+  }
+  #buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+  #buttons span {
+    display: none;
+  }
+  button.social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  button.social i {
+    font-size: 1.5rem;
+    margin-right: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
